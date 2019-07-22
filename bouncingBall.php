@@ -1,10 +1,11 @@
 <?php
-function bouncingBall($h, $bounce, $window) {
+function bouncingBallwhile($h, $bounce, $window) {
     if($h>0 ||$bounce>0||$bounce<1||$window<$h)
-    {   $n=-1;
-        //$b=pow($bounce,$n)*$h;
-    //for($n=1;$b>$window;$n++){$b=pow($bounce,$n)*$h;}
-    while($h>$window)
+    {   
+         
+    $n=-1;
+    
+   while($h>$window)
     {
         $h*=$bounce;
         $n++;
@@ -14,9 +15,19 @@ function bouncingBall($h, $bounce, $window) {
     }
     else{ echo "-1";}
 }
-bouncingBall(10,0.66,1.5);
+function bouncingBallfor($h, $bounce, $window) {
+    if($h>0 ||$bounce>0||$bounce<1||$window<$h)
+    {   
+        
+    for($n=-1;$h>$window;$n++){$h *=$bounce;}    
+    $result=2*$n+1;
+    echo $result;
+    }
+    else{ echo "-1";}
+}
+bouncingBallwhile(10,0.66,1.5);
 echo "<br>";
-bouncingBall(30,0.66,1.5);
+bouncingBallfor(30,0.66,1.5);
 echo "<br>";
-bouncingBall(1,0.66,1.5);
+bouncingBallfor(1,0.66,1.5);
 ?>
