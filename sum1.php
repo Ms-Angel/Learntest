@@ -1,4 +1,7 @@
 <?php
+/*Sum of the first nth term of Series
+1+1/4+1/7+1/10+.......第n項的總和
+*/
 function series_sum($n) {
     $a=1/(1+3*$n);
     $b=1+$a;
